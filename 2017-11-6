@@ -1,0 +1,15 @@
+  Nowadays, front-end development is really messy. It's messy in these ways:
+  
+  1 there is no 'standard' way to develop a web applicatoin / mobile app
+    --> there are always too many different tools and frameworks to choose from
+    --> based on different combination of tools / frameworks, we have to manually setup a build-chain(workflow) to compile source code
+    --> and it's not so easy to combine different tools, frameworks and building tools, because there are too many of them, and too 
+    many versions of them too
+  
+  2 the tool set are not stable, and it cost lots of time to search in the darkness
+    --> webpack is poorly documented
+    --> lots of plugins, loaders are poorly documented, poorly implemented, or simply does not work
+  
+  3 the technology being used is changing too fast
+    --> some library or tool was developed in jquery fashion, and now we have to transform it into es6 fashion, and we have to make it
+    work with webpack too(think about those plugins and different versions of them)
