@@ -1,0 +1,40 @@
+1 what is nginx?
+  At the very core, nginx is an HTTP router. It gives developers the flexibility to build and deploy web apps easier.
+2 install with modules(and third-party modules) 
+  --> install from source code
+    $ sudo apt install build-essential
+    $ sudo apt install libpcre3-dev zlib1g-dev libssl-dev
+    $ ./configure --prefix=/usr -conf-path=/etc/nginx \
+                  --with-http_ssl_module \
+                  --with-http_spdy_module \
+                  --with-http_realip_module \
+                  --with-http_stub_status_module
+    $ make && sudo make install    
+  --> check installation status: nginx -V
+3 basic configuration
+  --> the nginx.conf file
+  --> the most basic nginx configuration in nginx.conf
+    events {}
+    http {
+      server {}
+    }
+  --> start nginx server: 
+    (1) $ systemctl start nginx // when nginx is installed from package manager
+    (2) $ nginx // when nginx is built from source
+  --> check nginx running status:
+    (1) $ systemctl status nginx // when nginx is installed from package manater
+  --> send signal to nginx 
+    $ nginx -s stop|quit|reopen|reload
+4 configuration details
+  4.1 directives
+    (1) simple directivee(a config name, with multiple key-value pairs as parameters, and semicolon at the end, e.g., listen 80;)
+    (2) context directives
+      --> starts with a config name too, but instead of ending with a semicolon, it wraps a group of directives inside a curly braces
+      --> e.g., events, http, and server configs
+    (3) there is an implied main context wrapping the configuration file, and directives are always inherited downwards
+    
+      
+  
+    
+    
+  
