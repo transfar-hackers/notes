@@ -11,8 +11,8 @@
 4. choose an HTTP forwarding / proxy tool, nginx preferred
 
 ## setup developing environment
-5. it's better to have a *strict* restriction before-hand, this saves time and efforts
-6. *restrictions* includes:
+5. it's better to have a **strict** restriction before-hand, this saves time and efforts
+6. **restrictions** includes:
   *IDE used
   *IDE plugins used and settings
   *IDE configurations applied
@@ -33,7 +33,27 @@ when necessary
 10. if we use existing frameworks, we should apply *best practise* of it, frameworks usually have a
 *best practice* section
 
+## last words
+**It's better to have a STRIC restriction before-hand --> this saves a lot headaches**
+
 # during development
+10. senior developer / team lead should focus on:
+  * coordinates with other parties(product manager, Prototype, UI/UX and other development teams if necessary)
+  * the organization(structure) of the source codes
+  * maintain a good development environment, solve the environment problems in advance
+  * solve critical technical problems in advance
+  * write out critical source codes(such as framework of the whole project, common components, common usages of 
+  critical features of the framework)
+  * should teach team member with new techniques used in this project, and hand out related tasks as soon as
+  team members understands how to do it
+  * should decide priorities, and always solve high priority problems first
+11. framework --> components --> pages --> integrate with backend APIs
+  **make sure every backend API has its own set of mock data**
+
+# for testing
+
+# last words
+**TEAM WORK, Compromise and Open mind**
 
   
 @author: jack sparrow
