@@ -35,6 +35,7 @@ when necessary
 
 ## last words
 **It's better to have a STRIC restriction before-hand --> this saves a lot headaches**
+*A strict restriction requires that the senior developer / team lead having much more experience*
 
 # during development
 10. senior developer / team lead should focus on:
@@ -49,6 +50,11 @@ when necessary
   * should decide priorities, and always solve high priority problems first
 11. framework --> components --> pages --> integrate with backend APIs
   **make sure every backend API has its own set of mock data**
+  
+# source code version control
+12. always update local codes before writing new codes
+13. check in codes as soon as you made some progress and tested
+14. test and check in codes before EOD
 
 # for testing
 
