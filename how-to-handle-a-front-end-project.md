@@ -28,13 +28,13 @@
 when necessary
 
 ## based on the scenario and business requirements, setup developing framework
-9. if we have to create our own framework, make sure every team member understands the source codes.
+9. if we have to create our own framework, make sure **every team member understands the source codes**.
 **IMPORTANT: outline coding styles and make sure every team member understands it and rely on it**
 10. if we use existing frameworks, we should apply *best practise* of it, frameworks usually have a
 *best practice* section
 
 ## last words
-**It's better to have a STRIC restriction before-hand --> this saves a lot headaches**
+**It's better to have a STRIC restriction before-hand --> that saves a lot headaches**
 *A strict restriction requires that the senior developer / team lead having much more experience*
 
 # during development
@@ -55,6 +55,7 @@ when necessary
 12. always update local codes before writing new codes
 13. check in codes as soon as you made some progress and tested
 14. test and check in codes before EOD
+15. add comments whenever commiting any codes
 
 # for testing
 
