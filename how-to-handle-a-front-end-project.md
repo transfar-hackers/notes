@@ -9,6 +9,7 @@
 2. choose a proper IDE, Sublime Text 3 and Visual Studio Code preferred
 3. choose a version control tool, git + GitHub preferred
 4. choose an HTTP forwarding / proxy tool, nginx preferred
+5. choose an API management tool: postman preferred
 
 ## setup developing environment
 5. it's better to have a **strict** restriction before-hand, this saves time and efforts
@@ -43,7 +44,7 @@ when necessary
   * the organization(structure) of the source codes
   * maintain a good development environment, solve the environment problems in advance
   * solve critical technical problems in advance
-  * write out critical source codes(such as framework of the whole project, common components, common usages of 
+  * write critical source codes(such as framework of the whole project, common components, sample codes of common usages on
   critical features of the framework)
   * should teach team member with new techniques used in this project, and hand out related tasks as soon as
   team members understands how to do it
@@ -58,6 +59,7 @@ when necessary
 15. add comments whenever commiting any codes
 
 # for testing
+16. make use of API management tool, such as Postman to send http request, and creating mock data
 
 # last words
 **TEAM WORK, Compromise and Open mind**
