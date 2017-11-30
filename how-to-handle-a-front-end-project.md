@@ -61,6 +61,11 @@ when necessary
 # for testing
 16. make use of API management tool, such as Postman to send http request, and creating mock data
 
+# **MISTAKES**
+17. don't spare enough to do investigation on libraries: jsPDF does **NOT** support UTF-8
+18. eSignature requires party registration information to generate e-stamps --> blindly trust backend guys, didn't oversee
+  this issue
+
 # last words
 **TEAM WORK, Compromise and Open mind**
 
