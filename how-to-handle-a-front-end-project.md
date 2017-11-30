@@ -62,7 +62,9 @@ when necessary
 16. make use of API management tool, such as Postman to send http request, and creating mock data
 
 # **MISTAKES**
-17. don't spare enough to do investigation on libraries: jsPDF does **NOT** support UTF-8
+17. don't spare enough time to do investigation on libraries: jsPDF does **NOT** support UTF-8
+  --> then tried html-to-pdf --> need **JRE** installed
+  --> then tried pdfmake --> it's not **REAL** html standard as input
 18. eSignature requires party registration information to generate e-stamps --> blindly trust backend guys, didn't oversee
   this issue
 
