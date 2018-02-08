@@ -28,5 +28,20 @@ lightweight description of what to render to the screen.
   React uses a special syntax called JSX to write(describe) a React
 Element.
 
+# Data flow among Components and React Elements
+## this.props is something passed from parent to children, and processed
+by children.
+## this.state is something owned by a Component itself.
+## A component's own state usually comes from upper-stream via as
+this.props(in the form of <MyElement myProp={myJSXExpression}/>)
+## Define a property within a React Element:
+  <MyElement myProp='someValue' />
+  Then within the render() method, this property can be accessed via:
+  render() {
+    this.props.myProp
+  }
+  // someValue can be a constitution(JSX expression: {})
+
+
 
 
