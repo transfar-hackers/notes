@@ -4,33 +4,33 @@
 ## What is ReactJS
 ReactJS is a JavaScript library, for building user interfaces.
 
-## ReactJS features
-### Stateful Components
+# ReactJS features
+## Stateful Components
   Encapsulated js, html, css as packages that manage their own state, and
 composable to make complex UIs.
-  States and logic is written within JS, so no logic / state are injected
-to DOM nor HTML template.
+  States and logic is written within JS and JSX, so no logic / state are
+injected to DOM nor HTML template.
   This is how ReactJS achieves that:
   1 Components implement a render() method that takes input data and returns
 a description(declarative) of what to display.
   2 Components maintain internal data via this.state property. State
 changes(via this.setState() method) will be reflected to what to display.
-### Declarative Views
+## Declarative Views
   Create Views for each state in the application, Views are composed by
 Components.
   React will update and render just the right View when the state of the
 Application changes.
-### React Component object can be inherited(extended) by third-party
+## React Component object can be inherited(extended) by third-party
 Components/Libraries so as to enchance them.
-### A React Element
+## React Elements
   In fact, what the render() method returns is a React Element, which is a
 lightweight description of what to render to the screen.
   React uses a special syntax called JSX to write(describe) a React
 Element.
 
 # Data flow among Components and React Elements
-## this.props is something passed from parent to children, and processed
-by children.
+## this.props is something passed from parent to children React Elements,
+and prosessed by children.
 ## this.state is something owned by a Component itself.
 ## A component's own state usually comes from upper-stream via as
 this.props(in the form of <MyElement myProp={myJSXExpression}/>)
@@ -41,6 +41,39 @@ this.props(in the form of <MyElement myProp={myJSXExpression}/>)
     this.props.myProp
   }
   // someValue can be a constitution(JSX expression: {})
+
+# JSX
+  JSX tackles the pain that, the UI rendering is inherently coupled with
+other logics(UI logic or business logic).
+  This is how JSX does its job:
+  It is essentially JavaScript(a syntax extension to JavaScript), it's like
+an HTML template but it comes with nearly full power of JavaScript. It's
+purpose is to produce React Elements in a declarative way.
+
+# React Elements
+  React Elements correspond to HTML DOM, but they're different in that React
+Elements are plain JavaScript objects, it can be manipulated as JavaScript
+objects.
+  And React DOM takes care of HTML DOM to match the states of React
+Elements.
+  What we can do with React Elements?
+## Rendering an React Element into the HTML DOM(this process is taken care
+by React DOM).
+## Updating a rendered React Element --> note that React Elements are
+  immutable.
+## React Only Updates What's Necessary(the necessary part)
+
+# React Components
+  Essentially, React Components are JavaScript functions, that accept
+arbitrary inputs(called "props") and return React Elements as a description
+of the View. Additionally, React Components are pure JavaScript functions,
+that they do not change states --> but only producing new states.
+  What we can do with React Components?
+## Rendering a Component
+## Composing Components
+
+# State and Lifecycle
+
 
 
 
