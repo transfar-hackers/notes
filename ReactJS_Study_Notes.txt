@@ -6,15 +6,10 @@ ReactJS is a JavaScript library, for building user interfaces.
 
 # ReactJS features
 ## Stateful Components
-  Encapsulated js, html, css as packages that manage their own state, and
-composable to make complex UIs.
-  States and logic is written within JS and JSX, so no logic / state are
+  Encapsulated js, html, css as packages as components that can manage
+their own state, and components are composable to make complex UIs.
+  App States and logic are handled by components, so no logic / state are
 injected to DOM nor HTML template.
-  This is how ReactJS achieves that:
-  1 Components implement a render() method that takes input data and returns
-a description(declarative) of what to display.
-  2 Components maintain internal data via this.state property. State
-changes(via this.setState() method) will be reflected to what to display.
 ## Declarative Views
   Create Views for each state in the application, Views are composed by
 Components.
@@ -28,19 +23,21 @@ lightweight description of what to render to the screen.
   React uses a special syntax called JSX to write(describe) a React
 Element.
 
-# Data flow among Components and React Elements
-## this.props is something passed from parent to children React Elements,
+# How ReactJS works
+  1 Components implement a render() method that takes input data(as
+component properties: this.props) and returns a description of what to
+display.
+  2 Components maintain internal data as its state(with this.state)
+property. State changes will be reflected to what to display.
+  3 Besides this.props and this.state, you're free to add additionaly
+properties to this. Only thoes data that will be reflected on UI needs
+to go to this.state.
+  4 this.props is something passed from parent to children React Elements,
 and prosessed by children.
-## this.state is something owned by a Component itself.
-## A component's own state usually comes from upper-stream via as
+  5 this.state is something owned by a Component itself.
+  6 A component's own state usually comes from upper-stream via as
 this.props(in the form of <MyElement myProp={myJSXExpression}/>)
-## Define a property within a React Element:
-  <MyElement myProp='someValue' />
-  Then within the render() method, this property can be accessed via:
-  render() {
-    this.props.myProp
-  }
-  // someValue can be a constitution(JSX expression: {})
+
 
 # JSX
   JSX tackles the pain that, the UI rendering is inherently coupled with
@@ -73,6 +70,31 @@ that they do not change states --> but only producing new states.
 ## Composing Components
 
 # State and Lifecycle
+## Using State Correctly
+1 Use this.steState instead of assigining value to this.state directly.
+2 State updates may be asynchronous(and this.props too).
+  React may batch multiple setState() calls into a single update for
+performance. this.props and this.state may be updated asynchronously,
+you should not rely on their values for calculating the next state(
+remember? each state of the application is like a frame of a movie)
+  To fix this problem, use a second form of setState that accepts a
+function rather than an objet. That function will receive the previous
+state as the first argument, and the props at the time the update is
+applied as the second argument:
+  this.setState((prevState, props) => {
+    counter: prevState.counter + props.increment
+  })
+3 State updates are merged
+  When you call setState(), React merges the object you provide into the
+the current state(this.state), and the merging is shallow.
+
+## componentDidMount: after the component output has been rendered to the
+DOM.
+## componentWillUnmount:
+
+# Events Handling
+
+
 
 
 
