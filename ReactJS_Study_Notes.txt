@@ -6,46 +6,52 @@ ReactJS is a JavaScript library, for building user interfaces.
 
 # ReactJS features
 ## Stateful Components
-  Encapsulated js, html, css as packages as components that can manage
+  Encapsulated js, html(JSX), css as packages(components) that can manage
 their own state, and components are composable to make complex UIs.
-  App States and logic are handled by components, so no logic / state are
-injected to DOM nor HTML template.
+  App States and logic are handled by components, so *no* logic/state are
+injected to DOM nor HTML templates.
 ## Declarative Views
-  Create Views for each state in the application, Views are composed by
-Components.
+  Views are described by a syntax called JSX.
+  ReactJS apps create Views for each state in the application.
   React will update and render just the right View when the state of the
 Application changes.
 ## React Component object can be inherited(extended) by third-party
-Components/Libraries so as to enchance them.
+Components / Libraries so as to enchance them.
 ## React Elements
-  In fact, what the render() method returns is a React Element, which is a
-lightweight description of what to render to the screen.
-  React uses a special syntax called JSX to write(describe) a React
-Element.
+  In fact, what the render() method returns is a React Element(usually in
+the form of a JSX expression), which is a lightweight description of what
+to render to the screen.
 
 # How ReactJS works
   1 Components implement a render() method that takes input data(as
 component properties: this.props) and returns a description of what to
 display.
-  2 Components maintain internal data as its state(with this.state)
-property. State changes will be reflected to what to display.
+  2 Components maintain internal data as its state(as this.state) property.
+State changes will be reflected to what to display.
   3 Besides this.props and this.state, you're free to add additionaly
-properties to this. Only thoes data that will be reflected on UI needs
+properties to this. Only thoes data need to be reflected on UI needs
 to go to this.state.
-  4 this.props is something passed from parent to children React Elements,
-and prosessed by children.
+  4 this.props is something passed from parent React Elements to children,
+and prosessed by children React Elements.
   5 this.state is something owned by a Component itself.
-  6 A component's own state usually comes from upper-stream via as
-this.props(in the form of <MyElement myProp={myJSXExpression}/>)
-
+  6 A component's own state may fork from upper-stream via this.props, or
+from this.state of upper tier components.
 
 # JSX
-  JSX tackles the pain that, the UI rendering is inherently coupled with
-other logics(UI logic or business logic).
+  JSX is designed to tackle the pain that, the UI rendering is inherently
+coupled with other logics(UI logic or business logic).
   This is how JSX does its job:
-  It is essentially JavaScript(a syntax extension to JavaScript), it's like
-an HTML template but it comes with nearly full power of JavaScript. It's
-purpose is to produce React Elements in a declarative way.
+  JSX is essentially JavaScript(a syntax extension to JavaScript), it's
+like an HTML template but it comes with nearly full power of JavaScript.
+It's purpose is to produce React Elements in a declarative way.
+  JSX can contain JavaScript expressions.
+  JSX itself is a JavaScript expression too. This means that after
+compilation JSX become regular JavaScript function calls and evaluate to
+*JavaScript objects*. And this means that you can use JSX inside of
+JavaScript statements(such as if...else, for, and so on...), you can accept
+JSX as arguments or return it from functions.
+  Eventually JSX is compiled by babel into React.createElement() calls
+which return React Elements.
 
 # React Elements
   React Elements correspond to HTML DOM, but they're different in that React
@@ -71,12 +77,12 @@ that they do not change states --> but only producing new states.
 
 # State and Lifecycle
 ## Using State Correctly
-1 Use this.steState instead of assigining value to this.state directly.
+1 Use this.steState instead of assigining value to this.state directly so
+that the changes can trigger UI updates to reflect the changes.
 2 State updates may be asynchronous(and this.props too).
   React may batch multiple setState() calls into a single update for
 performance. this.props and this.state may be updated asynchronously,
-you should not rely on their values for calculating the next state(
-remember? each state of the application is like a frame of a movie)
+you should not rely on their values for calculating the next state.
   To fix this problem, use a second form of setState that accepts a
 function rather than an objet. That function will receive the previous
 state as the first argument, and the props at the time the update is
@@ -93,10 +99,3 @@ DOM.
 ## componentWillUnmount:
 
 # Events Handling
-
-
-
-
-
-
-
