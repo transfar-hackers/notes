@@ -104,3 +104,15 @@ DOM.
 ## componentWillUnmount:
 
 # Events Handling
+  There're two forms to define event handlers:
+  The handler function is wrapped within {} as JSX expression.
+  1 arrow function: <button onClick={(e) => this.handler(id, e)} />, need no this bind
+  2 normal function: <button onClick={this.handler.bind(this, id)} />
+  In both forms, the e argument representing the React Event will be passed
+as a second argument after the id. With an arrow function, we have to pass
+it explicityly, but with bind any further arguments are automatically
+forwarded.
+
+# Conditional Rendering
+
+
